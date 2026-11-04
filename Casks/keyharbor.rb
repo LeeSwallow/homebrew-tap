@@ -4,15 +4,15 @@ cask "keyharbor" do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/keyharbor"], must_succeed: false
   end
 
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     on_arm do
-      sha256 "86a4953410ebc4348f8b24c7a96911237d7820c5030312b6c0b15bfab7462af2"
+      sha256 "62cb327acaed9342e7a3adbd0ba2367d2f1a82030d8f54537f6f8b2d67e74fcf"
       url "https://github.com/LeeSwallow/KeyHarbor/releases/download/v#{version}/keyharbor_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "610035f0e3ed8eeb8ae656e3bb496d515bcff067f91a2ebbed98d47a0b3c08a8"
+      sha256 "34dde4613894950ef2ab0ecefb2cba6d30fdb44ccfd73934150683c04a60df2e"
       url "https://github.com/LeeSwallow/KeyHarbor/releases/download/v#{version}/keyharbor_#{version}_darwin_amd64.tar.gz"
     end
   end

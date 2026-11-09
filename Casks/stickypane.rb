@@ -4,25 +4,25 @@ cask "stickypane" do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/stickypane"], must_succeed: false
   end
 
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     on_arm do
-      sha256 "72c82b0f39fce97832162eb8256543b49ee2bc51d05a23b7dc6fc6a94b9c7b26"
+      sha256 "1915f1b7623d51ea8957739f297bc27f1ef18e8ca9af168ffda83aedcfe88ef4"
       url "https://github.com/LeeSwallow/stickypane/releases/download/v#{version}/stickypane_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "03de66a17cf0a87e823e3bdf748cdf3f39369a45ac7349cd09ecf4db44161ea2"
+      sha256 "d57f4005bebbe029400b54a8cc83fce524ae3a00686ec49fc98518d0b6a8f17e"
       url "https://github.com/LeeSwallow/stickypane/releases/download/v#{version}/stickypane_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "44df5345c7aa361626592ca39e437f540f5b9eacbf20d3894f2275118c26d85e"
+      sha256 "35e6d0372909b9902f7396ec1d29697e537649cef97008bff5e0b0d155b0e831"
       url "https://github.com/LeeSwallow/stickypane/releases/download/v#{version}/stickypane_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e23ec4252b97029d0d43b62f6aba46e5a84c7458e0233c28b53e234c483d3b42"
+      sha256 "fe8370620260a725ce379c7058c84843cefd71f339fdf929eec6156591bbf4bf"
       url "https://github.com/LeeSwallow/stickypane/releases/download/v#{version}/stickypane_#{version}_linux_amd64.tar.gz"
     end
   end
@@ -37,5 +37,5 @@ cask "stickypane" do
 
   binary "stickypane"
 
-  # No zap stanza required
+  zap :not_required
 end
